@@ -1,10 +1,10 @@
 #include<stdio.h>
 int main()
 {
-    int n,rem,sum=0,prod=1,x,rem2;
+    int n,rem,sum=0,rem2,prod=1;
     scanf("%d",&n);
-    x=n;
-    while (n>0) {
+    int x=n;
+    while (n!=0) {
         rem=n%10;
         sum=sum+rem;
         n/=10;
@@ -15,5 +15,6 @@ int main()
         prod=prod*rem2;
         x/=10;
     }
-    printf("%d",prod-sum);
+    int final_value=(prod-sum);
+    printf("%d",final_value);
 }
