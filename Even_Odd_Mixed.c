@@ -1,19 +1,23 @@
 #include<stdio.h>
 int main()
 {
-    int n,odd=0,even=0;
+    int n,cnt=0,ant=0,rem,cntn=0;
     scanf("%d",&n);
-    while(n) {
-        if (n%2!=0)
-            odd++;
+    int temp=n;
+    while(n!=0)
+    {
+        rem=n%10;
+    cntn++;
+        if(rem%2==0)
+        cnt++;
         else
-            even++;
-            n/=10;
+        ant++;
+        n=n/10;
     }
-    if (even>1 && odd==0) 
+   if(cnt==cntn)
     printf("Even");
-    else if (odd>1 && even==0) 
+    else if(ant==cntn)
     printf("Odd");
-    else 
-    printf("Mixed");
+    else
+  printf("Mixed");
 }
