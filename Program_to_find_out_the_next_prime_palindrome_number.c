@@ -1,26 +1,33 @@
 #include<stdio.h>
-int p(int n)
+int prime(int n)
 {
-    int i;
-    for(i=2;i<=n/2;i++)
+    int c=0;
+    for(int i=1;i<=n;i++)
     {
         if(n%i==0)
         {
-            return 0;
+            c++;
         }
     }
-    return 1;
-}
-int pl(int n)
-{
-    int s=0,t;
-    t=n;
-    while(n)
+    if(c==2)
     {
-        s=s*10+n%10;
+        return 1;
+    }
+    else
+    {
+        return 0;
+    }
+}
+int palin(int n)
+{
+    int t=n,r,rev=0;
+    while(n!=0)
+    {
+        r=n%10;
+        rev=rev*10+r;
         n=n/10;
     }
-    if(t==s)
+    if(rev==t)
     {
         return 1;
     }
@@ -31,17 +38,15 @@ int pl(int n)
 }
 int main()
 {
-    int n,i,c;
+    int n;
     scanf("%d",&n);
-    for(i=n+1;;i++)
+    for(int i=n+1;;i++)
     {
-        if(pl(i))
+        if(prime(i)&&palin(i))
         {
-            if(p(i))
-            {
-                printf("%d",i);
-                break;
-            }
+            printf("%d",i);
+            break;
         }
+        
     }
 }
