@@ -4,7 +4,7 @@ int roman(char ch)
     int v=0;
     switch(ch)
     {
-        case'I':v=1; break;
+        case'I':v=1;break;
         case'V':v=5;break;
         case'X':v=10;break;
         case'L':v=50;break;
