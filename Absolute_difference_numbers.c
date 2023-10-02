@@ -15,7 +15,7 @@ int main()
     int p2=rv%p;
     while(p2!=0)
     {
-        rem = p2%10;
+        rem=p2%10;
         rev=rev*10+rem;
         p2=p2/10;
     }
